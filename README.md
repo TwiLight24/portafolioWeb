@@ -1,59 +1,47 @@
-# PortafolioWeb
+# Portafolio Web
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.4.
+Portafolio personal desarrollado con Angular, donde presento información sobre mí, mis habilidades, proyectos realizados y formas de contacto.
 
-## Development server
+## Demo
 
-To start a local development server, run:
+Puedes ver el proyecto publicado en GitHub Pages:
 
-```bash
-ng serve
-```
+[Ver portafolio](https://TwiLight24.github.io/portafolioWeb/)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Tecnologías utilizadas
 
-## Code scaffolding
+- Angular 20
+- TypeScript
+- HTML5
+- CSS3 / SCSS
+- GitHub Pages
+- angular-cli-ghpages
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Versiones del entorno
 
-```bash
-ng generate component component-name
-```
+| Herramienta | Versión |
+|---|---|
+| Angular CLI | 20.3.26 |
+| Angular | 20.3.21 |
+| Node.js | 22.20.0 |
+| npm | 10.9.3 |
+| TypeScript | 5.9.3 |
+| RxJS | 7.8.2 |
+| Zone.js | 0.15.1 |
+| angular-cli-ghpages | 3.0.3 |
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Características
 
-```bash
-ng generate --help
-```
+- Diseño responsive para escritorio, tablet y móvil.
+- Sección de presentación personal.
+- Sección de habilidades técnicas.
+- Listado de proyectos.
+- Información de contacto.
+- Despliegue en GitHub Pages.
 
-## Building
+## Instalación y ejecución local
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### 1. Clonar el repositorio
 
 ```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+git clone https://github.com/TwiLight24/portafolioWeb.git
