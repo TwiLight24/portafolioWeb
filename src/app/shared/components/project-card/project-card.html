@@ -1,0 +1,29 @@
+<article class="project-card">
+  <div class="project-card__image">
+    <img [src]="project.imageUrl" [alt]="project.name">
+  </div>
+
+  <div class="project-card__content">
+    <h3>{{ project.name }}</h3>
+
+    <p>
+      {{ project.description }}
+    </p>
+
+    <div class="project-card__technologies">
+      @for (tech of project.technologies; track tech) {
+        <span>{{ tech }}</span>
+      }
+    </div>
+
+    <div class="project-card__actions">
+      @if (project.demoUrl) {
+        <a [href]="project.demoUrl" target="_blank">Demo</a>
+      }
+
+      @if (project.repositoryUrl) {
+        <a [href]="project.repositoryUrl" target="_blank">Código</a>
+      }
+    </div>
+  </div>
+</article>
