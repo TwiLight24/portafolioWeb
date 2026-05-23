@@ -1,6 +1,28 @@
 <article class="project-card reveal-scale" appRevealOnScroll>
-  <div class="project-card__image">
+  <div
+    class="project-card__media"
+    (mouseenter)="playVideo()"
+    (mouseleave)="pauseVideo()"
+  >
     <img [src]="project.imageUrl" [alt]="project.name">
+
+    @if (project.videoUrl) {
+      <video
+        #projectVideo
+        class="project-card__video"
+        [src]="project.videoUrl"
+        muted
+        loop
+        playsinline
+        preload="metadata">
+      </video>
+    }
+
+    @if (project.videoUrl) {
+      <div class="project-card__overlay">
+        <span>Demo en vivo</span>
+      </div>
+    }
   </div>
 
   <div class="project-card__content">

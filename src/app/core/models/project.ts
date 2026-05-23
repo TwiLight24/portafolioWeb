@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   technologies: string[];
   imageUrl: string;
+  videoUrl?: string;
   demoUrl?: string;
   repositoryUrl?: string;
   featured: boolean;

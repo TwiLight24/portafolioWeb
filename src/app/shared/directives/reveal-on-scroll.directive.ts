@@ -2,10 +2,13 @@ import {
   AfterViewInit,
   Directive,
   ElementRef,
+  Inject,
   Input,
   OnDestroy,
+  PLATFORM_ID,
   Renderer2,
 } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
   selector: '[appRevealOnScroll]',
@@ -19,7 +22,8 @@ export class RevealOnScrollDirective implements AfterViewInit, OnDestroy {
 
   constructor(
     private readonly elementRef: ElementRef<HTMLElement>,
-    private readonly renderer: Renderer2
+    private readonly renderer: Renderer2,
+    @Inject(PLATFORM_ID) private readonly platformId: object
   ) {}
 
   ngAfterViewInit(): void {
@@ -27,6 +31,16 @@ export class RevealOnScrollDirective implements AfterViewInit, OnDestroy {
 
     this.renderer.addClass(element, 'reveal');
     this.renderer.setStyle(element, '--reveal-delay', this.revealDelay);
+
+    if (!isPlatformBrowser(this.platformId)) {
+      this.renderer.addClass(element, 'reveal--visible');
+      return;
+    }
+
+    if (typeof IntersectionObserver === 'undefined') {
+      this.renderer.addClass(element, 'reveal--visible');
+      return;
+    }
 
     this.observer = new IntersectionObserver(
       ([entry]) => {

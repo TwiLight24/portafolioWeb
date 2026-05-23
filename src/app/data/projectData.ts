@@ -7,6 +7,7 @@ export const PROJECTS: Project[] = [
     description: 'Aplicación para gestión de comprobantes electrónicos, integración con servicios externos y generación de reportes.',
     technologies: ['Angular', 'Java', 'Spring Boot', 'SAP HANA'],
     imageUrl: 'assets/images/projects/PortalFE.png',
+    videoUrl: 'assets/videos/projects/PortalFE_Demo.mp4',
     demoUrl: '',
     repositoryUrl: '',
     featured: true
@@ -17,6 +18,7 @@ export const PROJECTS: Project[] = [
     description: 'Panel dinámico para visualizar métricas de negocio, ventas, estados de documentos y reportes.',
     technologies: ['Angular', 'TypeScript', 'Chart.js', 'API REST'],
     imageUrl: 'assets/images/projects/PortalFE.png',
+    videoUrl: 'assets/videos/projects/PortalFE_Demo.mp4',
     demoUrl: '',
     repositoryUrl: '',
     featured: true
@@ -27,6 +29,7 @@ export const PROJECTS: Project[] = [
     description: 'Servicio para conectar procesos externos con SAP Business One mediante consultas, servicios y lógica empresarial.',
     technologies: ['Java', 'SAP B1', 'Service Layer', 'HANA'],
     imageUrl: 'assets/images/projects/PortalFE.png',
+    videoUrl: 'assets/videos/projects/PortalFE_Demo.mp4',
     demoUrl: '',
     repositoryUrl: '',
     featured: true
@@ -37,6 +40,7 @@ export const PROJECTS: Project[] = [
     description: 'Generación de reportes tributarios, formatos planos y consultas optimizadas para cumplimiento normativo.',
     technologies: ['SAP HANA', 'SQL', 'Java', 'SUNAT'],
     imageUrl: 'assets/images/projects/PortalFE.png',
+    videoUrl: 'assets/videos/projects/PortalFE_Demo.mp4',
     demoUrl: '',
     repositoryUrl: '',
     featured: false
@@ -47,6 +51,7 @@ export const PROJECTS: Project[] = [
     description: 'Módulo para cargar, almacenar y consultar archivos anexos asociados a documentos empresariales.',
     technologies: ['Java', 'SQL Server', 'Angular', 'API REST'],
     imageUrl: 'assets/images/projects/PortalFE.png',
+    videoUrl: 'assets/videos/projects/PortalFE_Demo.mp4',
     demoUrl: '',
     repositoryUrl: '',
     featured: false
@@ -57,6 +62,7 @@ export const PROJECTS: Project[] = [
     description: 'Portal web para centralizar consultas, indicadores y seguimiento de operaciones internas.',
     technologies: ['Angular', 'TypeScript', 'SQL Server'],
     imageUrl: 'assets/images/projects/PortalFE.png',
+    videoUrl: 'assets/videos/projects/PortalFE_Demo.mp4',
     demoUrl: '',
     repositoryUrl: '',
     featured: false
