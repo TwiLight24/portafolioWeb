@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { Project } from '../../../core/models/project';
+import { RevealOnScrollDirective } from '../../../shared/directives/reveal-on-scroll.directive';
 
 @Component({
   selector: 'app-project-card',
-  imports: [],
+  imports: [RevealOnScrollDirective],
   templateUrl: './project-card.html',
   styleUrl: './project-card.css',
 })

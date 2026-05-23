@@ -1,6 +1,6 @@
 <section class="projects-section">
   <div class="container">
-    <div class="projects-header">
+    <div class="projects-header reveal-left" appRevealOnScroll revealDelay="100ms">
       <p class="section-tag">Proyectos</p>
 
       <h1>Soluciones desarrolladas para procesos empresariales.</h1>
@@ -11,7 +11,7 @@
       </p>
     </div>
 
-    <div class="projects-grid">
+    <div class="projects-grid" appRevealOnScroll revealDelay="200ms">
       @for (project of projects(); track project.id) {
         <app-project-card [project]="project" />
       }

@@ -34,3 +34,58 @@ a {
   width: min(1120px, 92%);
   margin: 0 auto;
 }
+
+/* ================================
+   Global Scroll Reveal Animations
+================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(42px);
+  filter: blur(10px);
+  transition:
+    opacity 800ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 800ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 800ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.reveal-left {
+  transform: translateX(-48px);
+}
+
+.reveal-right {
+  transform: translateX(48px);
+}
+
+.reveal-scale {
+  transform: scale(0.94);
+}
+
+.reveal-left.reveal--visible,
+.reveal-right.reveal--visible {
+  transform: translateX(0);
+}
+
+.reveal-scale.reveal--visible {
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
