@@ -11,10 +11,11 @@
         #projectVideo
         class="project-card__video"
         [src]="project.videoUrl"
+        [poster]="project.imageUrl"
         muted
         loop
         playsinline
-        preload="metadata">
+        preload="none">
       </video>
     }
 

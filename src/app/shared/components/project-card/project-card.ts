@@ -21,11 +21,7 @@ export class ProjectCard {
       return;
     }
 
-    video.currentTime = 0;
-
-    video.play().catch(() => {
-      // Algunos navegadores pueden bloquear play si el video no está listo.
-    });
+    video.play().catch(() => {});
   }
 
   pauseVideo(): void {
