@@ -42,17 +42,79 @@
   color: #38bdf8;
 }
 
+/* ================================
+   Tablet / Celular
+================================ */
+
 @media (max-width: 768px) {
   .navbar {
     height: auto;
-    padding: 18px 6%;
+    padding: 8px 4.5% 7px;
     flex-direction: column;
-    gap: 16px;
+    gap: 5px;
+  }
+
+  .navbar__brand {
+    font-size: 1.05rem;
+    line-height: 1;
   }
 
   .navbar__links {
+    width: 100%;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 14px;
+    gap: 4px 18px;
+  }
+
+  .navbar__links a {
+    font-size: 0.90rem;
+    line-height: 1.15;
+    font-weight: 700;
+  }
+}
+
+/* ================================
+   Celulares pequeños
+================================ */
+
+@media (max-width: 420px) {
+  .navbar {
+    padding: 7px 4% 6px;
+    gap: 4px;
+  }
+
+  .navbar__brand {
+    font-size: 1rem;
+  }
+
+  .navbar__links {
+    gap: 3px 15px;
+  }
+
+  .navbar__links a {
+    font-size: 0.82rem;
+  }
+}
+
+/* ================================
+   Celulares muy angostos
+================================ */
+
+@media (max-width: 360px) {
+  .navbar {
+    padding: 6px 3.5% 6px;
+  }
+
+  .navbar__brand {
+    font-size: 0.96rem;
+  }
+
+  .navbar__links {
+    gap: 3px 13px;
+  }
+
+  .navbar__links a {
+    font-size: 0.72rem;
   }
 }

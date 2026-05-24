@@ -1,6 +1,6 @@
 .experience-section {
   min-height: calc(100vh - 72px);
-  padding: 52px 0 90px;
+  padding: 22px 0 90px;
   background:
     radial-gradient(circle at 12% 22%, rgba(56, 189, 248, 0.16), transparent 30%),
     radial-gradient(circle at 88% 18%, rgba(129, 140, 248, 0.14), transparent 30%),
@@ -184,7 +184,7 @@
 
 @media (max-width: 860px) {
   .experience-section {
-    padding: 36px 0 70px;
+    padding: 24px 0 70px;
   }
 
   .experience-header {
