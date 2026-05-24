@@ -49,9 +49,9 @@
 @media (max-width: 768px) {
   .navbar {
     height: auto;
-    padding: 8px 4.5% 7px;
+    padding: 16px 4.5% 16px;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
   }
 
   .navbar__brand {
@@ -80,8 +80,8 @@
 
 @media (max-width: 420px) {
   .navbar {
-    padding: 7px 4% 6px;
-    gap: 4px;
+    padding: 15px 4% 15px;
+    gap: 10px;
   }
 
   .navbar__brand {
@@ -103,7 +103,8 @@
 
 @media (max-width: 360px) {
   .navbar {
-    padding: 6px 3.5% 6px;
+    padding: 14px 3.5% 14px;
+    gap: 10px;
   }
 
   .navbar__brand {
