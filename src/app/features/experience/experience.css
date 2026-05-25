@@ -19,7 +19,6 @@
   padding-top: 4px;
 }
 
-/* Igual que Sobre mí */
 .experience-section .section-tag {
   display: inline-flex;
   align-items: center;
@@ -34,7 +33,6 @@
   letter-spacing: 0.01em;
 }
 
-/* Igual que Sobre mí */
 .experience-header h1 {
   margin: 0 0 24px;
   max-width: 900px;
@@ -81,11 +79,16 @@
   border: 1px solid rgba(148, 163, 184, 0.18);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(12px);
-  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+  transition:
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    box-shadow 0.24s ease,
+    opacity 0.52s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.52s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .experience-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.01);
   border-color: rgba(56, 189, 248, 0.45);
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.32);
 }
@@ -95,6 +98,46 @@
   background:
     linear-gradient(135deg, rgba(30, 41, 59, 0.92), rgba(15, 23, 42, 0.82)),
     rgba(30, 41, 59, 0.84);
+}
+
+/* ================================
+   Reveal tipo Project Card - Más notorio
+================================ */
+
+.experience-card.reveal {
+  opacity: 0;
+  transform: translateY(34px) scale(0.86);
+  filter: blur(8px);
+}
+
+.experience-card.reveal--visible {
+  opacity: 1;
+  filter: blur(0);
+  animation: experienceCardPop 780ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.experience-card.reveal--visible:hover {
+  transform: translateY(-5px) scale(1.015);
+}
+
+@keyframes experienceCardPop {
+  0% {
+    opacity: 0;
+    transform: translateY(34px) scale(0.86);
+    filter: blur(8px);
+  }
+
+  65% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.025);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
 }
 
 .timeline-marker {
@@ -182,20 +225,41 @@
   }
 }
 
+/* Celular */
 @media (max-width: 860px) {
   .experience-section {
-    padding: 24px 0 70px;
+    padding: 18px 0 64px;
   }
 
   .experience-header {
-    margin-bottom: 42px;
+    margin-bottom: 20px;
+  }
+
+  .experience-section .section-tag {
+    margin-bottom: 14px;
+    padding: 12px 16px;
   }
 
   .experience-header h1 {
-    font-size: clamp(2.4rem, 10vw, 4rem);
+    margin-bottom: 18px;
+    font-size: clamp(2.05rem, 9vw, 3.2rem);
+    line-height: 1.08;
+    letter-spacing: -0.055em;
+  }
+
+  .experience-header > p:not(.section-tag) {
+    line-height: 1.65;
+    font-size: 0.98rem;
+  }
+
+  .timeline {
+    margin-top: 10px;
+    gap: 22px;
   }
 
   .timeline::before {
+    top: 8px;
+    bottom: 18px;
     left: 10px;
   }
 
@@ -204,7 +268,20 @@
     padding: 22px;
   }
 
+  .experience-card.reveal {
+    transform: translateY(28px) scale(0.88);
+  }
+
+  .experience-card.reveal--visible {
+    transform: translateY(0) scale(1);
+  }
+
+  .experience-card.reveal--visible:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+
   .timeline-marker {
+    top: 28px;
     left: -32px;
   }
 
@@ -215,5 +292,62 @@
 
   .experience-card__header span {
     white-space: normal;
+  }
+}
+
+/* Celulares pequeños */
+@media (max-width: 420px) {
+  .experience-section {
+    padding: 14px 0 58px;
+  }
+
+  .experience-header {
+    margin-bottom: 16px;
+  }
+
+  .experience-section .section-tag {
+    margin-bottom: 12px;
+    padding: 11px 15px;
+  }
+
+  .experience-header h1 {
+    margin-bottom: 16px;
+    font-size: clamp(1.95rem, 8.8vw, 2.8rem);
+    line-height: 1.09;
+  }
+
+  .experience-header > p:not(.section-tag) {
+    font-size: 0.96rem;
+    line-height: 1.62;
+  }
+
+  .timeline {
+    margin-top: 6px;
+    gap: 20px;
+  }
+
+  .experience-card {
+    margin-left: 30px;
+    padding: 20px;
+  }
+
+  .experience-card.reveal {
+    transform: translateY(24px) scale(0.9);
+  }
+
+  .experience-card.reveal--visible {
+    transform: translateY(0) scale(1);
+  }
+
+  .experience-card.reveal--visible:hover {
+    transform: translateY(-3px) scale(1.01);
+  }
+
+  .timeline::before {
+    left: 8px;
+  }
+
+  .timeline-marker {
+    left: -29px;
   }
 }
